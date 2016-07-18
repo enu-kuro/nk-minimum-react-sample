@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+figure {
+	margin: 0;
+}
+body {
+	font-family: Verdana, "游ゴシック", YuGothic, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+	line-height: 1.5;
+	background: #f3f3f3;
+}
+header {
+	background: #009874;
+}
+
+#postFormSection #postFormWrapper {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+#postFormSection #postFormTextarea {
+	height: 10em;
+}
+#postItemSection .postItem {
+	padding-top: 1em;
+	padding-bottom: 1em;
+	margin-top: 1em;
+	margin-bottom: 1em;
+}
+.postItem .postItemNameDate {
+	margin-top: -.5em;
+}
+.postItem .postItemNameDate h2 {
+	font-size: 1.5rem;
+	font-weight: bold;
+	padding-left: 0;
+}
+.postItem .postItemNameDate p {
+	padding-left: 0;
+}
+.postItem {
+	background: white;
+	padding-right: 2em;
+}

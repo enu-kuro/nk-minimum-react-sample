@@ -1,0 +1,34 @@
+{
+  "name": "nk-minimum-react-sample",
+  "version": "0.1.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build-production": "NODE_ENV=production browserify app/index.js -t [ babelify --presets [ es2015 react ] ] -t envify | uglifyjs -c drop_console,warnings=false --keep-fnames -m > public/bundle.js",
+    "build-dev": "NODE_ENV=dev browserify app/index.js -t [ babelify --presets [ es2015 react ] ] -t envify > public/bundle.js",
+    "watch": "watchify -t [ babelify --presets [ es2015 react ] ] app/index.js -o public/bundle.js -dv",
+    "server": "browser-sync start --proxy http://localhost:3000 --port 4000 --files public/bundle.js --no-open",
+    "start": "npm run watch & node server.js"
+  },
+  "author": "enu-kuro",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "express": "^4.14.0",
+    "morgan": "^1.7.0",
+    "react": "^15.1.0",
+    "react-dom": "^15.1.0",
+    "react-router": "^2.5.1"
+  },
+  "devDependencies": {
+    "babel-preset-es2015": "^6.9.0",
+    "babel-preset-react": "^6.11.1",
+    "babelify": "^7.3.0",
+    "browser-sync": "^2.13.0",
+    "browserify": "^13.0.1",
+    "envify": "3.4.1",
+    "uglifyjs": "^2.4.10",
+    "watchify": "^3.7.0"
+  }
+}
